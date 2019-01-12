@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+
+    <form>
+        <label>Tunneling type
+          <select id="ptype" required="true">
+            <option value="http">HTTP Web Proxy (unsafe)</option>
+            <option value="https">HTTPS Web Proxy</option>
+            <option value="socks">SOCKSv5</option>
+          </select>
+        </label>
+        <br/>
+        <label>Tunnel endpoint URL<input autocomplete="false" autofocus="true" required="true" size="50" type="text" id="purl" ></label>
+        <br/>
+        <label>Tunnel port<input autocomplete="false" autofocus="true" required="true" size="6" type="text" id="pport" ></label>
+        <br/>
+        <button type="submit">Save</button>
+    </form>
+    <p>
+    Make sure you select "Enable DNS over HTTPS" in Firefox's Connection settings (this addon cannot yet automatically
+    set it) for web-proxies. Also, never use SOCKS v4.
+    </p>
+
+    <script src="options.js"></script>
+
+  </body>
+
+</html>

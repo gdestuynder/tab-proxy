@@ -1,0 +1,54 @@
+{
+    "manifest_version": 2,
+    "name": "Certainly Private",
+    "version": "1.0.0",
+
+    "description": "Hide your IP address like a VPN, only more convenient",
+
+    "icons": {
+        "48": "48-favicon.png",
+        "72": "72-favicon.png",
+        "96": "96-favicon.png"
+    },
+
+    "web_accessible_resources": [
+        "48-favicon.png",
+        "72-favicon.png",
+        "96-favicon.png"
+    ],
+
+    "browser_action": {
+      "default_icon": "48-favicon.png",
+      "default_title": "Certainly Private Browsing"
+    },
+
+    "applications": {
+      "gecko": {
+        "id": "@tab-proxy",
+        "strict_min_version": "57.0"
+      }
+    },
+
+    "homepage_url": "https://github.com/mozilla/tab-proxy",
+
+    "options_ui": {
+      "page": "options.html"
+    },
+
+    "permissions": [
+        "contextualIdentities",
+        "cookies",
+        "tabs",
+        "activeTab",
+        "sessions",
+        "webRequest",
+        "webRequestBlocking",
+        "proxy",
+        "storage",
+        "<all_urls>"
+    ],
+
+    "background": {
+        "scripts": ["background.js"]
+    }
+}
